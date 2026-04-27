@@ -11,7 +11,7 @@ Clone this repository into your Snowflake dbt project to get a complete, structu
 After cloning, use the built-in agent to migrate all SPs from any database:
 
 ```
-@sp2dbt migrate the SPs in EDWPRD to dbt
+@spec.md migrate the SPs in EDWPRD to dbt
 ```
 
 That's it. The agent will:
@@ -24,9 +24,9 @@ That's it. The agent will:
 ### Examples
 
 ```
-@sp2dbt migrate the SPs in EDWPRD to dbt
-@sp2dbt migrate SP_RPT_SALES in EDWPRD.DATA to dbt
-@sp2dbt migrate all SPs in ANALYTICS_DB.TRANSFORMS to dbt
+@spec.md migrate the SPs in EDWPRD to dbt
+@spec.md migrate SP_RPT_SALES in EDWPRD.DATA to dbt
+@spec.md migrate all SPs in ANALYTICS_DB.TRANSFORMS to dbt
 ```
 
 The agent follows all rules from the [constitution](.specify/memory/constitution.md) automatically — layered architecture, naming conventions, completeness contract, testing requirements.
