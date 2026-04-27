@@ -11,7 +11,7 @@ Clone this repository into your Snowflake dbt project to get a complete, structu
 ### 1. Clone into your dbt project
 
 ```bash
-git clone https://github.com/<your-org>/sdd-dbt-migration-kit.git .specify
+git clone https://github.com/SudhirMAQLLC/sdd-dbt-migration-kit.git .specify
 ```
 
 Or copy the `specs/` and `.specify/` folders into your existing dbt project root.
