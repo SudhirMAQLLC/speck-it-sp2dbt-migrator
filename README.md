@@ -11,7 +11,7 @@ Clone this repository into your Snowflake dbt project to get a complete, structu
 After cloning, use the built-in agent to migrate all SPs from any database:
 
 ```
-@sp-to-dbt migrate the SPs in EDWPRD to dbt
+@sp2dbt migrate the SPs in EDWPRD to dbt
 ```
 
 That's it. The agent will:
@@ -24,9 +24,9 @@ That's it. The agent will:
 ### Examples
 
 ```
-@sp-to-dbt migrate the SPs in EDWPRD to dbt
-@sp-to-dbt migrate SP_RPT_SALES in EDWPRD.DATA to dbt
-@sp-to-dbt migrate all SPs in ANALYTICS_DB.TRANSFORMS to dbt
+@sp2dbt migrate the SPs in EDWPRD to dbt
+@sp2dbt migrate SP_RPT_SALES in EDWPRD.DATA to dbt
+@sp2dbt migrate all SPs in ANALYTICS_DB.TRANSFORMS to dbt
 ```
 
 The agent follows all rules from the [constitution](.specify/memory/constitution.md) automatically — layered architecture, naming conventions, completeness contract, testing requirements.
@@ -53,7 +53,7 @@ your_dbt_project/
 │   ├── intermediate/
 │   └── marts/
 ├── .agents/
-│   └── sp-to-dbt.md              # Migration agent — invoke with @sp-to-dbt
+│   └── sp2dbt.md              # Migration agent — invoke with @sp2dbt
 ├── .specify/
 │   └── memory/
 │       └── constitution.md        # Governing rules for all migrations
@@ -89,7 +89,7 @@ dbt debug
 
 Option A — **Agent (one command)**:
 ```
-@sp-to-dbt migrate the SPs in MY_DATABASE to dbt
+@sp2dbt migrate the SPs in MY_DATABASE to dbt
 ```
 
 Option B — **Manual (SDD workflow)**:
@@ -133,7 +133,7 @@ clarify → spec → plan → tasks → implement → validate
 
 | File | Purpose |
 |------|---------|
-| **sp-to-dbt.md** | Migration agent — invoke with `@sp-to-dbt` to auto-convert SPs |
+| **sp2dbt.md** | Migration agent — invoke with `@sp2dbt` to auto-convert SPs |
 | **constitution.md** | Non-negotiable rules: modularity, layered architecture, naming, testing, CI/CD |
 | **spec.md** | Full specification: scope, architecture, naming conventions, testing requirements |
 | **plan.md** | 5-phase implementation plan: Discovery → Prioritization → Design → Build → Validate |
